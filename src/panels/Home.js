@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader } from '@vkontakte/vkui';
+import Persik from './Persik';
 
 const itemStyle = {
     flexShrink: 0,
@@ -36,35 +37,35 @@ const Home = ({ id, go, fetchedUser }) => (
 							<HorizontalScroll>
 								<div style={{ display: 'flex' }}>
 									<div style={{ ...itemStyle, paddingLeft: 4 }}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Элджей
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Ольга
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Сергей
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Илья
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Алексей
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Костя
             </div>
 									<div style={itemStyle}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Миша
             </div>
 									<div style={{ ...itemStyle, paddingRight: 4 }}>
-										<Avatar size={64} style={{ marginBottom: 8 }}><Icon24User /></Avatar>
+										<Avatar size={64} style={{ marginBottom: 8 }}><Persik /></Avatar>
 										Вадим
             </div>
 								</div>
