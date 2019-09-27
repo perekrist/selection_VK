@@ -2,6 +2,7 @@
   "name": "selection_VK",
   "version": "1.0.0",
   "description": "",
+  "homepage": "./",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
@@ -25,6 +26,7 @@
     "babel-eslint": "^9.0.0",
     "core-js": "^2.6.9",
     "eslint": "^6.4.0",
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
