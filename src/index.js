@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import connect from '@vkontakte/vkui-connect';
 import App from './App';
+import connect from '@vkontakte/vk-connect';
 // import registerServiceWorker from './sw';
 
 // Init VK App
