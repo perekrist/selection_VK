@@ -7,6 +7,7 @@ import Home from './js/panels/Home';
 import Persik from './js/panels/Persik';
 import Event from './js/panels/Event';
 
+
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,7 +15,7 @@ class App extends React.Component {
 		this.state = {
 			activePanel: 'home',
 			isLoading: false,
-			dataEvent: [{}]
+			dataEvent: []
 		};
 
 		this.getData();
@@ -42,6 +43,9 @@ class App extends React.Component {
 	};
 
 	render() {
+		if(this.state.dataEvent.length === 0) {
+			return null;
+		}
 		return (
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" dataEvent = {this.state.dataEvent} go={this.go} />

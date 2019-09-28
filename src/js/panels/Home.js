@@ -21,10 +21,12 @@ const Home = ({ go, dataEvent }) => (
 					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
 					<HorizontalScroll>
 						<div style={{ display: 'flex' }}>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src={dataEvent[0].imgEvent} size={128} style={{ marginBottom: 16 }} />
-								<Cell description={dataEvent[1].valEvent + " участников"} align='center' style={{ paddingLeft: 6 }}><b>{dataEvent[0].nameEvent}</b></Cell>
-							</div>
+							{dataEvent.map((i)=>{return (
+								<div style={{ ...itemStyle, paddingLeft: 3 }} description="15">
+									<Avatar type="image" src={i.imgEvent} size={128} style={{ marginBottom: 16 }} />
+									<Cell description={i.valEvent + " участников"} align='center' style={{ paddingLeft: 3 }}><b>{i.nameEvent}</b></Cell>
+								</div>
+							)})};
 						</div>
 					</HorizontalScroll>
 				</Group>
