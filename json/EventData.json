@@ -5,9 +5,28 @@
     "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
     "valEvent": 3200
 },
-{
+{ 
     "idEvent": 1,
-    "nameEvent": "VK fest",
-    "imgEvent": "http://vkclub.su/_data/stickers/fest/sticker_vk_fest_032.png",
-    "valEvent": 687
-}]
+    "nameEvent": "Цифровой пjlhsd",
+    "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
+    "valEvent": 666
+},
+{ 
+    "idEvent": 2,
+    "nameEvent": "WorldSkils",
+    "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
+    "valEvent": 235
+},
+{ 
+    "idEvent": 3,
+    "nameEvent": "День города",
+    "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
+    "valEvent": 2456
+},
+{ 
+    "idEvent": 4,
+    "nameEvent": "Универсиада",
+    "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
+    "valEvent": 76576
+}
+]
