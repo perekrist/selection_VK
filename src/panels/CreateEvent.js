@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
 
 
+
 const itemStyle = {
 	flexShrink: 0,
 	display: 'flex',
@@ -11,16 +12,19 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Second = ({ go }) => (
+const Home = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
-			 <Epica/>
+			<PanelHeader>
+      left={<HeaderButton>{<Icon24Back />}</HeaderButton>}
+      </PanelHeader>
+
 		</Panel>
 	</View>
 
 );
 
-Second.propTypes = {
+Home.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -33,4 +37,4 @@ Second.propTypes = {
 	}),
 };
 
-export default Second;
+export default Home;

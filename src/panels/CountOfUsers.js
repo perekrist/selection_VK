@@ -14,6 +14,9 @@ const itemStyle = {
 const Second = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
+      <PanelHeader>
+      left={<HeaderButton>{<Icon24Back />}</HeaderButton>}
+      </PanelHeader>
     Список Участников
     </PanelHeader>
     <Group title="Создатель">
