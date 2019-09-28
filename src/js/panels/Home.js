@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
 
-
-
 const itemStyle = {
 	flexShrink: 0,
 	display: 'flex',
@@ -12,52 +10,63 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Home = ({ go }) => (
+const Home = ({ go, data }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
 			<PanelHeader> Помогаю </PanelHeader>
-			<Group>
-				<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
-				<HorizontalScroll>
-					<div style={{ display: 'flex' }}>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="" size={128} style={{ marginBottom: 16 }} />
-							<Cell description=" участников" align='center' style={{ paddingLeft: 6 }}><b>eventData1[0].nameEvent</b></Cell>
+			{/* {fetchedUser &&
+				<Group title="User Data Fetched with VK Connect">
+					<ListItem
+						before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
+						description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
+					>
+						{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
+					</ListItem>
+				</Group>} */}
+			{data &&
+				<Group>
+					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
+					<HorizontalScroll>
+						<div style={{ display: 'flex' }}>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="" size={128} style={{ marginBottom: 16 }} />
+								<Cell description=" участников" align='center' style={{ paddingLeft: 6 }}><b>{'${data[0].eventName}'}</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="15 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="222 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="65494 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="688 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="61 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="15 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+					</HorizontalScroll>
+				</Group>
+			}
+				<Group>
+					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Вы учавствуете</Header>
+					<HorizontalScroll>
+						<div style={{ display: 'flex' }}>
+							<div style={{ ...itemStyle, paddingLeft: 6 }}>
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l78TPPJBHH1ff6PND4r5qd6eyCbJNa_jqZfgxw=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16, paddingBottom: 0 }} />
+								<Cell description="50000 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							</div>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="222 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-						</div>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="65494 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-						</div>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="688 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-						</div>
-						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="61 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-						</div>
-					</div>
-				</HorizontalScroll>
-			</Group>
-			<Group>
-				<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Вы учавствуете</Header>
-				<HorizontalScroll>
-					<div style={{ display: 'flex' }}>
-						<div style={{ ...itemStyle, paddingLeft: 6 }}>
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l78TPPJBHH1ff6PND4r5qd6eyCbJNa_jqZfgxw=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16, paddingBottom: 0 }} />
-							<Cell description="50000 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-						</div>
-					</div>
-				</HorizontalScroll>
-			</Group>
+					</HorizontalScroll>
+				</Group>
 			<Group>
 				<Div>
 					<Button size="xl" onClick={go} data-to="persik">
