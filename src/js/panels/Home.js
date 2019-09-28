@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell } from '@vkontakte/vkui';
+import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
 
 
 const itemStyle = {
@@ -19,29 +19,29 @@ const Home = ({ go }) => (
 				<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
 				<HorizontalScroll>
 					<div style={{ display: 'flex' }}>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="3000 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="3000 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="15 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="15 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="222 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="222 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="65494 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="65494 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="688 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="688 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
-						<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="61 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="61 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
 					</div>
 				</HorizontalScroll>
@@ -50,17 +50,19 @@ const Home = ({ go }) => (
 				<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Вы учавствуете</Header>
 				<HorizontalScroll>
 					<div style={{ display: 'flex' }}>
-						<div style={{ ...itemStyle, paddingLeft: 8 }}>
+						<div style={{ ...itemStyle, paddingLeft: 6 }}>
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l78TPPJBHH1ff6PND4r5qd6eyCbJNa_jqZfgxw=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16, paddingBottom: 0 }} />
-							<Cell description="50000 участников" align='center' style={{ paddingLeft: 8 }}><b>Цифровой прорыв</b></Cell>
+							<Cell description="50000 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
 						</div>
 					</div>
 				</HorizontalScroll>
 			</Group>
 			<Group>
-				<Button size="xl" level="1" onClick={go} data-to="persik">
-					Создать событие
-				</Button>
+				<Div>
+					<Button size="xl" onClick={go} data-to="persik">
+						Создать событие
+					</Button>
+				</Div>
 			</Group>
 		</Panel>
 	</View>

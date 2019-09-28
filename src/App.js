@@ -3,8 +3,9 @@ import connect from '@vkontakte/vkui-connect';
 import { View } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
-import Persik from './panels/Persik';
+import Home from './js/panels/Home';
+import Persik from './js/panels/Persik';
+import Event from './js/panels/Event';
 
 class App extends React.Component {
 	constructor(props) {
@@ -38,6 +39,7 @@ class App extends React.Component {
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
 				<Persik id="persik" go={this.go} />
+				<Event id="event" go={this.go} />
 			</View>
 		);
 	}
