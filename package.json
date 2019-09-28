@@ -1,8 +1,8 @@
 {
-  "name": "selection_VK",
+  "name": "selectionVK",
   "version": "1.0.0",
   "description": "",
-  "homepage": "./",
+  "homepage": "/",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
@@ -12,7 +12,7 @@
     "eslint": "eslint"
   },
   "keywords": [],
-  "author": "",
+  "author": "team Selection",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.1",

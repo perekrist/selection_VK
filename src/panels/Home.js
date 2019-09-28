@@ -1,85 +1,71 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader, View, Header, HorizontalScroll } from '@vkontakte/vkui';
+import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Root } from '@vkontakte/vkui';
 import Persik from './Persik';
 
-
 const itemStyle = {
-	flexShrink: 0,
-	width: 160,
-	height: 184,
-	display: 'flex',
-	flexDirection:
-		'column',
-	alignItems: 'center',
-	fontSize: 12
-};
+    flexShrink: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    fontSize: 16
+}
 
 const Home = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
-		{fetchedUser &&
-			<Group title="User Data Fetched with VK Connect">
-				<ListItem
-					before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
-					description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-				>
-					{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-				</ListItem>
-			</Group>}
-
-			<View activePanel="horizontal">
-				<Panel id="horizontal">
-					<Group style={{ paddingBottom: 8 }}>
-						<Header level="secondary">Последние добавления</Header>
-						<HorizontalScroll>
-							<div style={{ display: 'flex' }}>
-								<div style={{ ...itemStyle, paddingLeft: 4 }}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Элджей
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Ольга
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Сергей
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Илья
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Алексей
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Костя
-								</div>
-								<div style={itemStyle}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Миша
-								</div>
-								<div style={{ ...itemStyle, paddingRight: 4 }}>
-									<Avatar size={128} style={{ marginBottom: 16 }}></Avatar>
-									Вадим
-								</div>
+	<Root activeView="view">
+		<View id="view" activePanel="horizontal">
+			<Panel id="horizontal">
+				<PanelHeader> Помогаю </PanelHeader>
+				<Group>
+					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
+					<HorizontalScroll>
+						<div style={{ display: 'flex' }}>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="3000 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
 							</div>
-						</HorizontalScroll>
-					</Group>
-				</Panel>
-			</View>
-
-		<Group title="Navigation Example">
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					КРИСТИНА, ПРИВЕТ
-				</Button>
-			</Div>
-		</Group>
-	</Panel>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="15 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="222 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="65494 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="688 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+							<div style={{ ...itemStyle, paddingLeft: 10 }} description="15">
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
+								<Cell description="61 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+						</div>
+					</HorizontalScroll>
+				</Group>
+				<Group>
+					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
+					<HorizontalScroll>
+						<div style={{ display: 'flex' }}>
+							<div style={{ ...itemStyle, paddingLeft: 8 }}>
+								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l78TPPJBHH1ff6PND4r5qd6eyCbJNa_jqZfgxw=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16, paddingBottom: 0 }} />
+								<Cell description="50000 участников" align='center' style={{paddingLeft: 8}}><b>Цифровой прорыв</b></Cell>
+							</div>
+						</div>
+					</HorizontalScroll>
+				</Group>
+				<Group>
+					<Button size="xl" level="1" onClick={go} data-to="persik">
+						Создать событие
+					</Button>
+				</Group>
+			</Panel>
+		</View>
+	</Root>
 );
 
 Home.propTypes = {
