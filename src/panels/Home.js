@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Root } from '@vkontakte/vkui';
-import Persik from './Persik';
+import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell } from '@vkontakte/vkui';
+
 
 const itemStyle = {
 	flexShrink: 0,
@@ -11,8 +11,8 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Home = ({ id, go, fetchedUser }) => (
-	<View id="view" activePanel="horizontal">
+const Home = ({ go }) => (
+	<View activePanel="horizontal">
 		<Panel id="horizontal">
 			<PanelHeader> Помогаю </PanelHeader>
 			<Group>
@@ -60,7 +60,7 @@ const Home = ({ id, go, fetchedUser }) => (
 			<Group>
 				<Button size="xl" level="1" onClick={go} data-to="persik">
 					Создать событие
-					</Button>
+				</Button>
 			</Group>
 		</Panel>
 	</View>
