@@ -12,7 +12,7 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Home = ({ go }) => (
+const Home1 = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
 			<PanelHeader> Помогаю </PanelHeader>
@@ -70,7 +70,7 @@ const Home = ({ go }) => (
 
 );
 
-Home.propTypes = {
+Home1.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -83,4 +83,4 @@ Home.propTypes = {
 	}),
 };
 
-export default Home;
+export default Home1;

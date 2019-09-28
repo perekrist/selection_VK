@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, Button, Textarea, File, FormLayout, Select, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
-import Epica from './panels/Epica'
-
-
+import { Panel, Imput, Button, FormLayout, Checkbox, Textarea, File, FormLayout, Select, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
+import Icon24Camera from '@vkontakte/icons/dist/24/camera';
 
 
 const itemStyle = {
@@ -14,7 +12,7 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Second = ({ go }) => (
+const Forms = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
        <Imput top="Название мероприятия" placeholder="Введите название"/>
@@ -39,7 +37,7 @@ const Second = ({ go }) => (
 
 );
 
-Second.propTypes = {
+Forms.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -52,4 +50,4 @@ Second.propTypes = {
 	}),
 };
 
-export default Second;
+export default Forms;

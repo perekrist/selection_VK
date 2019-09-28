@@ -4,6 +4,12 @@ import { View } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
+import Home1 from './panels/Home1';
+import First from './panels/First';
+import CountOfUsers from './panels/CountOfUsers';
+import Forms from './panels/Forms';
+import CreateEvent from './panels/CreateEvent';
+
 
 class App extends React.Component {
 	constructor(props) {

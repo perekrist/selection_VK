@@ -11,7 +11,7 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Second = ({ go }) => (
+const CountOfUsers = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
       <PanelHeader>
@@ -44,7 +44,7 @@ const Second = ({ go }) => (
 
 );
 
-Second.propTypes = {
+CountOfUsers.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -57,4 +57,4 @@ Second.propTypes = {
 	}),
 };
 
-export default Second;
+export default CountOfUsers;
