@@ -15,7 +15,7 @@ const itemStyle = {
 const Second = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
-
+      
 		</Panel>
 	</View>
 
