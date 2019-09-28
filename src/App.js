@@ -1,6 +1,5 @@
 import React from 'react';
-import 'react-native';
-import connect from '@vkontakte/vkui-connect';
+//import connect from '@vkontakte/vkui-connect';
 import { View } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 
@@ -14,38 +13,28 @@ class App extends React.Component {
 
 		this.state = {
 			activePanel: 'home',
-			fetchedUser: null,
+			isLoading: false,
+			dataEvent: [{}]
 		};
+
+		this.getData();
 	}
 
 	getData() {
-		return fetch('/json/EventData.json')
+		return fetch('./json/EventData.json')
 			.then((response) => response.json())
 			.then((responseJson) => {
 				this.setState({
 					isLoading: false,
-					dataSource: responseJson.eventData,
-				}, function () {
-
+					dataEvent: responseJson
 				});
-
-			})
+			})			
 			.catch((error) => {
 				console.error(error);
 			});
 	}
-	componentDidMount() {
-		this.getData();
-		connect.subscribe((e) => {
-			switch (e.detail.type) {
-				case 'VKWebAppGetUserInfoResult':
-					this.setState({ fetchedUser: e.detail.data });
-					break;
-				default:
-					console.log(e.detail.type);
-			}
-		});
-		connect.send('VKWebAppGetUserInfo', {});
+	componentDidMount() {				
+		
 	}
 
 	go = (e) => {
@@ -55,7 +44,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<View activePanel={this.state.activePanel}>
-				<Home id="home" fetchedUser={this.state.fetchedUser} data = {this.state.data} go={this.go} />
+				<Home id="home" dataEvent = {this.state.dataEvent} go={this.go} />
 				<Persik id="persik" go={this.go} />
 				<Event id="event" go={this.go} />
 			</View>

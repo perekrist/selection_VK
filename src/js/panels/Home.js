@@ -10,52 +10,24 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Home = ({ go, data }) => (
+const Home = ({ go, dataEvent }) => (
 	<View activePanel="horizontal">
+		
+		
 		<Panel id="horizontal">
-			<PanelHeader> Помогаю </PanelHeader>
-			{/* {fetchedUser &&
-				<Group title="User Data Fetched with VK Connect">
-					<ListItem
-						before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
-						description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-					>
-						{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-					</ListItem>
-				</Group>} */}
-			{data &&
+			<PanelHeader> Привет  </PanelHeader>
+
 				<Group>
 					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
 					<HorizontalScroll>
 						<div style={{ display: 'flex' }}>
 							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="" size={128} style={{ marginBottom: 16 }} />
-								<Cell description=" участников" align='center' style={{ paddingLeft: 6 }}><b>{'${data[0].eventName}'}</b></Cell>
-							</div>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-								<Cell description="15 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-							</div>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-								<Cell description="222 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-							</div>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-								<Cell description="65494 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-							</div>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-								<Cell description="688 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
-							</div>
-							<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-								<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-								<Cell description="61 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+								<Avatar type="image" src={dataEvent[0].imgEvent} size={128} style={{ marginBottom: 16 }} />
+								<Cell description={dataEvent[1].valEvent + " участников"} align='center' style={{ paddingLeft: 6 }}><b>{dataEvent[0].nameEvent}</b></Cell>
 							</div>
 						</div>
 					</HorizontalScroll>
 				</Group>
-			}
 				<Group>
 					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Вы учавствуете</Header>
 					<HorizontalScroll>
