@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
-
+import eventData from '../../json/EventData'
 
 const itemStyle = {
 	flexShrink: 0,
@@ -20,8 +20,8 @@ const Home = ({ go }) => (
 				<HorizontalScroll>
 					<div style={{ display: 'flex' }}>
 						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
-							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
-							<Cell description="3000 участников" align='center' style={{ paddingLeft: 6 }}><b>Цифровой прорыв</b></Cell>
+							<Avatar type="image" src="" size={128} style={{ marginBottom: 16 }} />
+							<Cell description=" участников" align='center' style={{ paddingLeft: 6 }}><b>eventData1[0].nameEvent</b></Cell>
 						</div>
 						<div style={{ ...itemStyle, paddingLeft: 6 }} description="15">
 							<Avatar type="image" src="https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo" size={128} style={{ marginBottom: 16 }} />
