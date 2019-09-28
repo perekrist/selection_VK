@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.1",
+    "json-loader": "^0.5.7",
     "react-hot-loader": "^4.12.14",
     "react-scripts": "^2.1.8"
   },
