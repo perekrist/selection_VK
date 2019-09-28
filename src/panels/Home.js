@@ -14,7 +14,6 @@ const itemStyle = {
 const Second = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
-			 <Epica/>
 		</Panel>
 	</View>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, Imput, Button, FormLayout, Checkbox, Textarea, File, FormLayout, Select, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
+import { Panel, Input, Button, Checkbox, Textarea, File, FormLayout, Select, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
 import Icon24Camera from '@vkontakte/icons/dist/24/camera';
 
 
@@ -15,8 +15,8 @@ const itemStyle = {
 const Forms = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
-       <Imput top="Название мероприятия" placeholder="Введите название"/>
-       <Imput top="Дата проведения" placeholder="Выбрать дату" type="date"/>
+       <Input top="Название мероприятия" placeholder="Введите название"/>
+       <Input top="Дата проведения" placeholder="Выбрать дату" type="date"/>
        <Select top="Направление события" placeholder="Выбрать направление">
           <option value="m">Образ жизни</option>
           <option value="f">Бизнес</option>
@@ -26,8 +26,9 @@ const Forms = ({ go }) => (
       <File top="Загрузите изображение" before={<Icon24Camera />} size="l">
         Открыть галерею
       </File>
+			</FormLayout>
         <FormLayout>
-        <Checkbox>Я согласен с <Link>правилами</Link/> </Checkbox>
+        <Checkbox>Я согласен с <Link>правилами</Link> </Checkbox>
       </FormLayout>
       <Div>
        <Button>Создать событие</Button>
