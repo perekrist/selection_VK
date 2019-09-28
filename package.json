@@ -2,7 +2,7 @@
   "name": "selectionVK",
   "version": "1.0.0",
   "description": "",
-  "homepage": "/",
+  "homepage": "./",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
