@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Panel, Button, Group, Avatar, PanelHeader, View, Header, HorizontalScroll, Link, Cell, Div } from '@vkontakte/vkui';
-import Epica from './panels/Epica'
 
 
 
@@ -16,7 +15,7 @@ const itemStyle = {
 const Second = ({ go }) => (
 	<View activePanel="horizontal">
 		<Panel id="horizontal">
-			 <Epica/>
+
 		</Panel>
 	</View>
 
