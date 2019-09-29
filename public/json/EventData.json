@@ -1,32 +1,34 @@
 [
-{ 
+{
     "idEvent": 0,
     "nameEvent": "Цифровой прорыв",
     "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
-    "valEvent": 3200
+    "valEvent": 3200,
+    "dateOfEvent": "Казань, 27 сентября",
+    "description": "Цифровой прорыв — новый конкурс платформы «Россия – страна возможностей». Лучшие участники попадут на самый большой хакатон страны. Победители получат денежные призы и гранты, а также возможность реализовать свои проекты."
 },
-{ 
+{
     "idEvent": 1,
-    "nameEvent": "Цифровой пjlhsd",
-    "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
-    "valEvent": 666
-},
-{ 
-    "idEvent": 2,
     "nameEvent": "WorldSkils",
     "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
-    "valEvent": 235
+    "valEvent": 235,
+    "dateOfEvent": "Казань, 23-27 августа",
+    "description": "WorldSkils — новый конкурс платформы «Россия – страна возможностей». Лучшие участники попадут на самый большой хакатон страны. Победители получат денежные призы и гранты, а также возможность реализовать свои проекты."
 },
-{ 
-    "idEvent": 3,
+{
+    "idEvent": 2,
     "nameEvent": "День города",
     "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
-    "valEvent": 2456
+    "valEvent": 2456,
+    "dateOfEvent": "Томск, 7 сентября",
+    "description": "День города — новый конкурс платформы «Россия – страна возможностей». Лучшие участники попадут на самый большой хакатон страны. Победители получат денежные призы и гранты, а также возможность реализовать свои проекты."
 },
-{ 
-    "idEvent": 4,
+{
+    "idEvent": 3,
     "nameEvent": "Универсиада",
     "imgEvent": "https://yt3.ggpht.com/a/AGF-l7-Sd_K7nMAvb6rnZmAjh-sUHVW2fSuov_BdRQ=s900-c-k-c0xffffffff-no-rj-mo",
-    "valEvent": 76576
+    "valEvent": 76576,
+    "dateOfEvent": "Красноярск, 15-23 декабря",
+    "description": "Универсиада — новый конкурс платформы «Россия – страна возможностей». Лучшие участники попадут на самый большой хакатон страны. Победители получат денежные призы и гранты, а также возможность реализовать свои проекты."
 }
 ]
