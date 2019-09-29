@@ -10,23 +10,21 @@ const itemStyle = {
 	fontSize: 16
 }
 
-const Home = ({ go, dataEvent }) => (
+const Home = ({ id, go, dataEvent, fetchedUser }) => (
 	<View activePanel="horizontal">
-		
-		
 		<Panel id="horizontal">
-			<PanelHeader> Привет  </PanelHeader>
+			<PanelHeader align='center'> Помогаю </PanelHeader>
 
 				<Group>
 					<Header level="secondary" aside={<Link onClick={go} data-to="persik">Показать все</Link>}>Последние добавления</Header>
 					<HorizontalScroll>
 						<div style={{ display: 'flex' }}>
 							{dataEvent.map((i)=>{return (
-								<div style={{ ...itemStyle, paddingLeft: 3 }} description="15">
-									<Avatar type="image" src={i.imgEvent} size={128} style={{ marginBottom: 16 }} />
+								<div style={{ ...itemStyle, paddingLeft: 3 }} description="15" >
+									<Avatar type="image" src={i.imgEvent} size={128} style={{ marginBottom: 16 }} onClick={go} data-to="event" data-evt={i.idEvent} />
 									<Cell description={i.valEvent + " участников"} align='center' style={{ paddingLeft: 3 }}><b>{i.nameEvent}</b></Cell>
 								</div>
-							)})};
+							)})}
 						</div>
 					</HorizontalScroll>
 				</Group>

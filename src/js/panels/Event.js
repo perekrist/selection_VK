@@ -1,21 +1,17 @@
 import React from 'react';
-import {Panel, PanelHeader, HeaderButton, platform, IOS} from '@vkontakte/vkui';
+import {View, PanelHeader, HeaderButton, platform, IOS, List, Cell} from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
+import '../../css/Event.css'
 
-const osname = platform();
+//const osname = platform();
 
-const Event = props => (
-	<Panel id={props.id}>
-		<PanelHeader
-			left={<HeaderButton onClick={props.go} data-to="home">
-				{osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
-			</HeaderButton>}
-		>
-			Persik
-		</PanelHeader>
-		
-	</Panel>
+const Event = ({ go, dataEvent, props, activeEvent }) => (
+		<List>
+			<Cell>
+				Qwerty Uiop
+			</Cell>
+		</List>
 );
 
 
