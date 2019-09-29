@@ -19,7 +19,7 @@ const itemStyle = {
 
 const First = ({ go }) => (
 	<View activePanel="brand">
-  <Panel id="brand">
+  <Panel id="first">
     <PanelHeader
       left={<HeaderButton>{<Icon24Back />}</HeaderButton>}
       right={<HeaderButton>{<Icon24Phone />}</HeaderButton>}
@@ -74,11 +74,16 @@ const First = ({ go }) => (
           </div>
         </HorizontalScroll>
       </Group>
-			<Div style={{display: 'flex'}}>
-				<Button size="l" stretched style={{ marginRight: 8 }}>Записи</Button>
-		 		<Button size="l" stretched style={{ marginRight: 8 }}>Чаты</Button>
-				<Button size="l" stretched style={{ marginRight: 8 }}>Задачи</Button>
+			<Div>
+				<Button size="xl" onClick={go} data-to="persik">
+					Поделиться
+				</Button>
 			</Div>
+			// <Div style={{display: 'flex'}}>
+			// 	<Button size="l" stretched style={{ marginRight: 8 }}>Записи</Button>
+		 	// 	<Button size="l" stretched style={{ marginRight: 8 }}>Чаты</Button>
+			// 	<Button size="l" stretched style={{ marginRight: 8 }}>Задачи</Button>
+			// </Div>
   </Panel>
 	</View>
 );

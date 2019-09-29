@@ -39,6 +39,8 @@ class App extends React.Component {
 	};
 
 	render() {
+		let activePanel = this.props.route.name === 'about' ? 'aboutPanel' : 'mainPanel';
+
 		return (
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
